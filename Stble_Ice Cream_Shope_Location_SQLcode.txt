@@ -1,17 +1,3 @@
-############### City Level Codes ###################
- SELECT cities.gid,
-    cities.id,
-    cities.name,
-    cities.population,
-    cities.total_crim,
-    cities.crime_inde,
-    cities.university,
-    cities.geom
-   FROM ice_cream.counties_view
-     CROSS JOIN ice_cream.cities
-  WHERE st_within(cities.geom, counties_view.geom) AND cities.crime_inde <= 0.02 AND cities.university = 1::numeric;
-
-
 ############### County Level Codes ###################
 
  SELECT counties.gid,
@@ -29,6 +15,24 @@
     counties.geom
    FROM ice_cream.counties
   WHERE counties.age_18_64 >= 25000::numeric AND counties.no_farms87 > 500::numeric AND counties.pop_sqmile < 150::double precision;
+
+
+
+############### City Level Codes ###################
+ SELECT cities.gid,
+    cities.id,
+    cities.name,
+    cities.population,
+    cities.total_crim,
+    cities.crime_inde,
+    cities.university,
+    cities.geom
+   FROM ice_cream.counties_view
+     CROSS JOIN ice_cream.cities
+  WHERE st_within(cities.geom, counties_view.geom) AND cities.crime_inde <= 0.02 AND cities.university = 1::numeric;
+
+
+
 
 ############### Intersates Level Codes ###################
  SELECT cities_view.gid,
