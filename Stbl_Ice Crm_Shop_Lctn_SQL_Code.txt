@@ -6,7 +6,7 @@ The overall criteria for this projects are met by the following SQL quesries are
 #Located near a university or college
 #At least one recreation area within 10 miles
 #Interstate within 20 miles
-
+djfhjdhf
 ############### County Level Codes ###################
 
  SELECT counties.gid,
