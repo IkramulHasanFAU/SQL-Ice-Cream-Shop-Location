@@ -1,3 +1,12 @@
+The overall criteria for this projects are met by the following SQL quesries are: 
+#Greater than 500 farms for milk production
+#A labor pool of at least 25,000 individuals between the ages of 18 and 64 years
+#A low crime index (less than or equal to 0.02)
+#A population of less than 150 individuals per square mile
+#Located near a university or college
+#At least one recreation area within 10 miles
+#Interstate within 20 miles
+
 ############### County Level Codes ###################
 
  SELECT counties.gid,
